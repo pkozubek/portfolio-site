@@ -2,22 +2,55 @@ import React from "react"
 import styled from "styled-components"
 
 const SingleProjectWrapper = styled.div`
-  width: 100px;
-  height: 150px;
-  border: 1px solid black;
+  width: 25%;
+  margin-right: 5%;
+  height: auto;
+  box-shadow: 0 0 10px lightgray;
+  display: flex;
+  flex-wrap: wrap;
+
+  &:hover {
+    box-shadow: 0 0 25px lightgray;
+  }
+
+  h3 {
+    color: gray;
+    text-align: center;
+  }
 `
 
-const ProjectContent = styled.div``
-const StyledImage = styled.div``
+const ProjectContent = styled.div`
+  width: 100%;
+`
+const StyledImage = styled.div`
+  width: 100%;
+  border: 1px solid lightgray;
+`
+const StyledLabel = styled.label`
+  border: 2px solid lightgray;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 5px;
+`
 
-const singleProject = ({ children, title, tags, description }) => {
+const TagsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`
+
+const singleProject = ({ children, title, tags }) => {
   return (
     <SingleProjectWrapper>
       <StyledImage>{children}</StyledImage>
       <ProjectContent>
-        <p>{title}</p>
-        <p>{description}</p>
-        <div>{tags}</div>
+        <h3>{title}</h3>
+        <TagsWrapper>
+          {tags.map(singleTag => {
+            return <StyledLabel>{singleTag}</StyledLabel>
+          })}
+        </TagsWrapper>
       </ProjectContent>
     </SingleProjectWrapper>
   )

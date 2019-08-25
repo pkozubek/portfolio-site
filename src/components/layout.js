@@ -7,7 +7,7 @@ import Header from "./header/header"
 const LayoutWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 100%;
   padding: 0;
   margin: 0;
 `
@@ -24,9 +24,9 @@ const PageWrapper = styled.main`
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  padding-left: 15px;
-  width: calc(65vw - 15px);
-  margin-left: 30vw;
+  margin-left: 30%;
+  width: calc(70% - 25px);
+  padding: 25px;
 `
 
 const Layout = ({ children }) => {
