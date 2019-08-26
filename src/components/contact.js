@@ -13,7 +13,6 @@ const ContactContainer = styled.div`
 `
 
 const FormContainer = styled.form`
-  border: 1px solid black;
   width: 70%;
 
   input {
@@ -32,13 +31,139 @@ const InfoContainer = styled.div`
 
 const FormMessage = styled.div`
   width: 100%;
-  border: 1px solid black;
+  padding: 5px;
+  margin: 25px 0;
 `
 
+const handleMessageSend = event => {
+  event.preventDefault()
+  console.log("click")
+}
+
 class Contact extends Component {
-  state = {}
+  state = {
+    form: {
+      name: {
+        value: "",
+        type: "text",
+        placeholder: "Your name",
+        validationRules: {
+          required: true,
+          rules: {
+            maxLength: 30,
+          },
+        },
+        isModed: false,
+        isValid: false,
+      },
+      email: {
+        value: "",
+        type: "text",
+        placeholder: "Your email",
+        validationRules: {
+          required: true,
+          rules: {
+            maxLength: 50,
+            isEmail: true,
+          },
+        },
+        isModed: false,
+        isValid: false,
+      },
+      message: {
+        value: "",
+        type: "textarea",
+        placeholder: "Your message",
+        validationRules: {
+          required: true,
+          rules: {
+            maxLength: 300,
+          },
+        },
+        isModed: false,
+        isValid: false,
+      },
+    },
+    isFormValid: false,
+  }
+
+  validateEmail = email => {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(String(email).toLowerCase())
+  }
+
+  checkIfCorrect = (value, validationRules) => {
+    let isCorrect = true
+
+    if (validationRules) {
+      const { rules } = validationRules
+      if (value.length < 5) {
+        isCorrect = false
+      }
+
+      if (rules.isEmail) {
+        isCorrect = this.validateEmail(value) && isCorrect
+      }
+      if (rules.maxLength) {
+        isCorrect = value.length < rules.maxLength && isCorrect
+      }
+    }
+
+    return isCorrect
+  }
+
+  handleInputChange = event => {
+    const { id, value } = event.target
+
+    const newFormState = { ...this.state.form }
+    const newInputState = { ...this.state.form[event.target.id] }
+    const { validationRules } = newInputState
+
+    newInputState.value = value
+    newInputState.isModed = true
+    newInputState.isValid = this.checkIfCorrect(value, validationRules)
+
+    newFormState[id] = newInputState
+
+    let isFormValid = true
+    for (let singleInputId in newFormState) {
+      isFormValid = newFormState[singleInputId].isValid && isFormValid
+    }
+
+    this.setState({
+      form: newFormState,
+      isFormValid: isFormValid,
+    })
+  }
 
   render() {
+    const { form, isFormValid } = this.state
+
+    const formArray = []
+
+    for (let singleInputId in form) {
+      formArray.push({
+        uniqueName: singleInputId,
+        config: form[singleInputId],
+      })
+    }
+
+    const renderedForm = formArray.map(singleInput => {
+      const { uniqueName } = singleInput
+      const { placeholder, value, type } = singleInput.config
+      return (
+        <Input
+          key={uniqueName}
+          type={type}
+          name={uniqueName}
+          id={uniqueName}
+          value={value}
+          placeholder={placeholder}
+          change={event => this.handleInputChange(event)}
+        />
+      )
+    })
+
     return (
       <ContactContainer>
         <Title>Kontakt</Title>
@@ -49,22 +174,10 @@ class Contact extends Component {
           nisl porta tellus, vitae auctor justo risus eget dolor.
         </FormMessage>
         <FormContainer>
-          <Input
-            type="text"
-            name="name"
-            id="name"
-            value=""
-            placeholder="Your name"
-          />
-          <Input
-            type="text"
-            name="email"
-            id="email"
-            value=""
-            placeholder="Your email"
-          />
-          <textarea></textarea>
-          <Button>test</Button>
+          {renderedForm}
+          <Button disabled={!isFormValid} action={handleMessageSend}>
+            test
+          </Button>
         </FormContainer>
         <InfoContainer />
       </ContactContainer>

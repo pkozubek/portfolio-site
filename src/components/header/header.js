@@ -34,7 +34,7 @@ const BackgroundSection = ({ className, children }) => (
 )
 
 const HeaderContainer = styled(BackgroundSection)`
-  width: 30%;
+  width: 25%;
   height: 100vh;
   background-position: bottom center;
   background-repeat: repeat-y;

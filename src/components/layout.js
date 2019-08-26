@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled, { createGlobalStyle } from "styled-components"
 
 import Header from "./header/header"
+import SiteMetada from "../siteMetadata/siteMetadata"
 
 const LayoutWrapper = styled.div`
   display: flex;
@@ -16,6 +17,8 @@ const Reset = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
+    color: gray;
+    font-family: 'Varela Round', sans-serif;
 }
 `
 
@@ -32,6 +35,7 @@ const PageWrapper = styled.main`
 const Layout = ({ children }) => {
   return (
     <LayoutWrapper>
+      <SiteMetada />
       <Reset />
       <Header />
       <PageWrapper>{children}</PageWrapper>
