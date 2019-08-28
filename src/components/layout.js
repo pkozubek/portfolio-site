@@ -27,7 +27,7 @@ const PageWrapper = styled.main`
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-left: 30%;
+  margin-left: 25%;
   width: calc(70% - 25px);
   padding: 25px;
 `

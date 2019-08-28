@@ -165,7 +165,7 @@ class Contact extends Component {
     })
 
     return (
-      <ContactContainer>
+      <ContactContainer data-aos="fade-out">
         <Title>Kontakt</Title>
         <FormMessage>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mollis

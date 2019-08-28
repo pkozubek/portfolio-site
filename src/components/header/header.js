@@ -35,7 +35,7 @@ const BackgroundSection = ({ className, children }) => (
 
 const HeaderContainer = styled(BackgroundSection)`
   width: 25%;
-  height: 100vh;
+  height: 100%;
   background-position: bottom center;
   background-repeat: repeat-y;
   background-size: cover;
@@ -44,6 +44,12 @@ const HeaderContainer = styled(BackgroundSection)`
   left: 0;
   padding: 0;
   margin: 0;
+
+  @media (max-width: 768px) {
+    position: static !important;
+    width: 100%;
+    height: 100vh;
+  }
 `
 
 export default HeaderContainer
