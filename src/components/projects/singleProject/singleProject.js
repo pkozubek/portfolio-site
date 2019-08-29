@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const SingleProjectWrapper = styled.div`
   width: 25%;
-  margin-right: 5%;
+  margin: 25px;
   height: auto;
   box-shadow: 0 0 10px lightgray;
   display: flex;
@@ -27,7 +27,7 @@ const StyledImage = styled.div`
   border: 1px solid lightgray;
 `
 const StyledLabel = styled.label`
-  border: 2px solid lightgray;
+  border: 2px solid rgba(51, 153, 255, 0.2);
   border-radius: 8px;
   margin: 5px;
   padding: 5px;

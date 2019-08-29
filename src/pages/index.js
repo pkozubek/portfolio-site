@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import AboutMe from "../components/aboutMe/aboutMe"
 import Project from "../components/projects/projects"
 import Contact from "../components/contact"
-import Experience from "../components/experience"
+import Experience from "../components/experience/experience"
 
 class IndexPage extends Component {
   componentDidMount() {
