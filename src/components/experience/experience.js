@@ -14,8 +14,8 @@ const experience = () => {
           startDate={[2018, 1, 1]}
           endDate={null}
           description={[
-            { title: "Developr" },
-            { title: "Senior Developer analyst" },
+            { title: "Senior Developer Analyst", date: "04.2019 - obecnie" },
+            { title: "Developer", date: "02.2018 - 04.2019" },
           ]}
         />
         <SingleExperience

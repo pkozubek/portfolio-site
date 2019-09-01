@@ -17,13 +17,13 @@ const education = () => {
           <h3>Informatyka</h3>
         </SingleExpEduContainer>
         <FaRegCircle />
-        <SubSingleExperience>
-          <h2>Studia Magisterskie</h2>
+        <SubSingleExperience destination="education">
+          <h3>Studia Magisterskie</h3>
           <p>2015 - 2017</p>
         </SubSingleExperience>
         <FaRegCircle />
-        <SubSingleExperience>
-          <h2>Studia Inżynierskie</h2>
+        <SubSingleExperience destination="education">
+          <h3>Studia Inżynierskie</h3>
           <p>2012 - 2015</p>
         </SubSingleExperience>
       </Content>

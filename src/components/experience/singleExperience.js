@@ -2,11 +2,9 @@ import React from "react"
 import styled from "styled-components"
 
 import { SingleExpEduContainer } from "../shared/shared"
-//import SubExp from "../shared/subExp"
+import SubExp from "../shared/subExp"
 
 const singleExperience = ({ endDate, startDate, companyName, description }) => {
-  const printDate = startDate => {}
-
   const calculateMonths = days => {
     const daysInYear = 365
     const year = Math.floor(days / daysInYear)
@@ -30,20 +28,19 @@ const singleExperience = ({ endDate, startDate, companyName, description }) => {
 
   const singleDescription =
     description.length === 1 ? <h3>{description[0].title}</h3> : null
-  /*
+
   const multipleDescription =
     description.length > 1
       ? description.map(singleDescription => {
-          const { title } = singleDescription
-
-          console.log(title, "title")
+          const { title, date } = singleDescription
           return (
-            <SubExp>
-              <p>test</p>
+            <SubExp destination="experience" key={title}>
+              <h3>{title}</h3>
+              <p>{date}</p>
             </SubExp>
           )
         })
-      : null*/
+      : null
 
   return (
     <>
@@ -52,6 +49,7 @@ const singleExperience = ({ endDate, startDate, companyName, description }) => {
         {singleDescription}
         <p>{calculateMonths(diffDays)}</p>
       </SingleExpEduContainer>
+      {multipleDescription}
     </>
   )
 }

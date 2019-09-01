@@ -33,6 +33,11 @@ export const SubSingleExperience = styled.div`
   margin-top: 10px;
   margin-right: 10%;
 
+  h3 {
+    color: ${props =>
+      props.destination == "experience" ? "rgba(51,153,255,0.5)" : "gray"};
+  }
+
   p {
     color: lightgray;
   }

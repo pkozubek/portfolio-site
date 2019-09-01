@@ -2,14 +2,17 @@ import React from "react"
 import styled from "styled-components"
 
 import { FaRegCircle } from "react-icons/fa"
-import SubSingleExperience from "./shared"
+import { SubSingleExperience } from "./shared"
 
-const subExp = ({ children }) => {
+const subExp = ({ children, destination }) => {
+  console.log(destination)
   return (
-    <div>
+    <>
       <FaRegCircle />
-      <SubSingleExperience>{children}</SubSingleExperience>
-    </div>
+      <SubSingleExperience destination={destination}>
+        {children}
+      </SubSingleExperience>
+    </>
   )
 }
 
