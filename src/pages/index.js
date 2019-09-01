@@ -8,6 +8,7 @@ import AboutMe from "../components/aboutMe/aboutMe"
 import Project from "../components/projects/projects"
 import Contact from "../components/contact"
 import Experience from "../components/experience/experience"
+import Education from "../components/education/education"
 
 class IndexPage extends Component {
   componentDidMount() {
@@ -25,8 +26,9 @@ class IndexPage extends Component {
           <AboutMe />
         </div>
 
-        <Experience data-aos="fade-up" />
-        <Project data-aos="fade-up" />
+        <Experience />
+        <Education />
+        <Project />
         <Contact />
       </Layout>
     )

@@ -6,13 +6,8 @@ import SingleProject from "./singleProject/singleProject"
 import FormatedImage from "./formatedImg"
 import Title from "../ui/title"
 import singleProject from "./singleProject/singleProject"
+import { Container } from "../shared/shared"
 
-const ProjectContainer = styled.div`
-  width: 90%;
-  margin: 5%;
-  display: flex;
-  flex-wrap: wrap;
-`
 const ProjectWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -40,8 +35,6 @@ const projects = () => {
     }
   `)
 
-  console.log(data)
-
   const projects = [
     {
       tags: ["javascript", "react"],
@@ -55,40 +48,40 @@ const projects = () => {
     },
     {
       tags: ["javascript", "react"],
-      title: "test",
+      title: "test3",
       image: data.project1.childImageSharp.fluid,
     },
     {
       tags: ["javascript", "react", "redux"],
-      title: "test2",
+      title: "test4",
       image: data.project2.childImageSharp.fluid,
     },
     {
       tags: ["javascript", "react"],
-      title: "test",
+      title: "test5",
       image: data.project1.childImageSharp.fluid,
     },
     {
       tags: ["javascript", "react", "redux"],
-      title: "test2",
+      title: "test6",
       image: data.project2.childImageSharp.fluid,
     },
   ]
 
   return (
-    <ProjectContainer data-aos="fade-out">
+    <Container data-aos="fade-out">
       <Title>Projekty</Title>
       <ProjectWrapper>
         {projects.map(singleProject => {
           const { tags, title, image } = singleProject
           return (
-            <SingleProject tags={tags} title="test">
+            <SingleProject key={title} tags={tags} title="test">
               <FormatedImage fluidImage={image} />
             </SingleProject>
           )
         })}
       </ProjectWrapper>
-    </ProjectContainer>
+    </Container>
   )
 }
 
