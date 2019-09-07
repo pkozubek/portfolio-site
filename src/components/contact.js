@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 
+import { FaLinkedin, FaPhoneSquare, FaEnvelope } from "react-icons/fa"
+
 import Button from "../components/ui/button"
 import Input from "../components/ui/input"
 import Title from "../components/ui/title"
@@ -13,7 +15,7 @@ const ContactContainer = styled.div`
 `
 
 const FormContainer = styled.form`
-  width: 70%;
+  width: 60%;
 
   input {
     width: 60%;
@@ -25,14 +27,34 @@ const FormContainer = styled.form`
 `
 
 const InfoContainer = styled.div`
-  width: 25%;
-  border: 1px solid black;
+  width: calc(35% - 30px);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+  p {
+    font-size: 0.9em;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    color: gray;
+    text-decoration: none;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    line-height: 1.3;
+  }
 `
 
 const FormMessage = styled.div`
   width: 100%;
   padding: 5px;
   margin: 25px 0;
+  text-align: center;
 `
 
 const handleMessageSend = event => {
@@ -168,18 +190,29 @@ class Contact extends Component {
       <ContactContainer data-aos="fade-out">
         <Title>Kontakt</Title>
         <FormMessage>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mollis
-          imperdiet nisi at dapibus. Aenean auctor odio tincidunt mi aliquet
-          tristique. Suspendisse rhoncus, mauris in maximus fermentum, justo
-          nisl porta tellus, vitae auctor justo risus eget dolor.
+          Spodobały ci się moje projekty? Chciałbyś nawiązać współprace?
+          Skontaktuj się ze mną!
         </FormMessage>
         <FormContainer>
           {renderedForm}
           <Button disabled={!isFormValid} action={handleMessageSend}>
-            test
+            Wyślij
           </Button>
         </FormContainer>
-        <InfoContainer />
+        <InfoContainer>
+          <p>
+            <FaLinkedin />{" "}
+            <a href="https://www.linkedin.com/in/pawel-kozubek92/">
+              pawel-kozubek92
+            </a>
+          </p>
+          <p>
+            <FaPhoneSquare /> 600289359
+          </p>
+          <p>
+            <FaEnvelope /> pkozubek92@gmail.com
+          </p>
+        </InfoContainer>
       </ContactContainer>
     )
   }

@@ -8,9 +8,12 @@ const StyledButton = styled.button`
   margin: 5px;
   border-radius: 8px;
   box-shadow: none;
-  border: 2px solid lightgreen;
-  color: white;
-  background: lightgreen;
+  border: 2px solid lightgray;
+  color: black;
+  background: white;
+  font-size: 0.8em;
+  transition: 0.4s;
+  font-family: "Varela Round", sans-serif;
 
   &:disabled {
     background: rgb(224, 223, 223);
@@ -23,6 +26,7 @@ const StyledButton = styled.button`
     border: 2px solid rgb(61, 175, 213);
     box-sizing: border-box;
     color: rgb(61, 175, 213);
+    transition: 0.4s;
   }
 `
 

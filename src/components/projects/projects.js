@@ -18,14 +18,42 @@ const ProjectWrapper = styled.div`
 const projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      project1: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      beerguru: file(relativePath: { eq: "beerguru.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      project2: file(relativePath: { eq: "gatsby-icon.png" }) {
+      memegenerator: file(relativePath: { eq: "meme-generator.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      meal: file(relativePath: { eq: "meal.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      doge: file(relativePath: { eq: "doge.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      burgerapp: file(relativePath: { eq: "burgerapp.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      racing: file(relativePath: { eq: "racing.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -37,34 +65,34 @@ const projects = () => {
 
   const projects = [
     {
-      tags: ["javascript", "react"],
-      title: "test",
-      image: data.project1.childImageSharp.fluid,
+      tags: ["javascript", "react", "redux", "fetch"],
+      title: "Beerguru",
+      image: data.beerguru.childImageSharp.fluid,
     },
     {
       tags: ["javascript", "react", "redux"],
-      title: "test2",
-      image: data.project2.childImageSharp.fluid,
+      title: "Meme-generator",
+      image: data.memegenerator.childImageSharp.fluid,
     },
     {
-      tags: ["javascript", "react"],
-      title: "test3",
-      image: data.project1.childImageSharp.fluid,
+      tags: ["javascript", "react", "fetch", "infinite-scroll"],
+      title: "Infinite-Doge",
+      image: data.doge.childImageSharp.fluid,
     },
     {
-      tags: ["javascript", "react", "redux"],
-      title: "test4",
-      image: data.project2.childImageSharp.fluid,
+      tags: ["javascript", "react", "fetch"],
+      title: "Meal-suggestion",
+      image: data.meal.childImageSharp.fluid,
     },
     {
-      tags: ["javascript", "react"],
-      title: "test5",
-      image: data.project1.childImageSharp.fluid,
+      tags: ["javascript", "fetch", "redux"],
+      title: "Burger app(course)",
+      image: data.burgerapp.childImageSharp.fluid,
     },
     {
-      tags: ["javascript", "react", "redux"],
-      title: "test6",
-      image: data.project2.childImageSharp.fluid,
+      tags: ["C#", "Unity"],
+      title: "Racing Game",
+      image: data.racing.childImageSharp.fluid,
     },
   ]
 
@@ -75,7 +103,7 @@ const projects = () => {
         {projects.map(singleProject => {
           const { tags, title, image } = singleProject
           return (
-            <SingleProject key={title} tags={tags} title="test">
+            <SingleProject key={title} tags={tags} title={title}>
               <FormatedImage fluidImage={image} />
             </SingleProject>
           )

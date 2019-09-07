@@ -2,12 +2,13 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledInput = styled.input`
-  padding: 15px;
+  padding: 20px;
   margin: 5px;
   border: none;
   background: rgba(220, 220, 220, 0.2);
   border-radius: 8px;
   border: 1px solid rgba(220, 220, 220, 0.2);
+  font-family: "Varela Round", sans-serif;
 
   &:focus {
     outline: none;
@@ -25,6 +26,7 @@ const StyledTextarea = styled.textarea`
   resize: none;
   transition: height 0.5s ease-out;
   height: 50px;
+  font-family: "Varela Round", sans-serif;
 
   &:focus {
     outline: none;

@@ -3,9 +3,10 @@ import styled from "styled-components"
 import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa"
 
 import MyImage from "./image"
+import Menu from "../../menu/menu"
 
 const HeaderContainer = styled.div`
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
   color: white;
@@ -35,6 +36,7 @@ const InfoWrapper = styled.div`
   color: white;
   width: 70%;
   margin: 15%;
+  display: none;
 
   p {
     text-align: center;
@@ -52,6 +54,8 @@ const InfoWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
+    display: block;
+
     p {
       margin: 0;
     }
@@ -69,6 +73,7 @@ const LinkWrapper = styled.div`
 
   svg:hover {
     color: white;
+    cursor: pointer;
   }
 `
 
@@ -91,6 +96,7 @@ const header = () => {
           <a href="#">Kontakt</a>, na pewno się odezwę!
         </p>
       </InfoWrapper>
+      <Menu />
     </HeaderContainer>
   )
 }

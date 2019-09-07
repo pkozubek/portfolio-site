@@ -4,8 +4,8 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 const StyledImg = styled(Img)`
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   display: block;
   border: 2px solid rgba(51, 153, 255, 0.4);
@@ -28,7 +28,7 @@ const Image = () => {
     query {
       me: file(relativePath: { eq: "me.png" }) {
         childImageSharp {
-          fluid(maxWidth: 100) {
+          fluid(maxWidth: 200) {
             ...GatsbyImageSharpFluid
           }
         }

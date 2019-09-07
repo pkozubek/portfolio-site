@@ -27,7 +27,7 @@ const StyledImage = styled.div`
   border: 1px solid lightgray;
 `
 const StyledLabel = styled.label`
-  border: 2px solid rgba(51, 153, 255, 0.2);
+  border: 1px solid rgba(51, 153, 255, 0.5);
   border-radius: 8px;
   margin: 5px;
   padding: 5px;
@@ -38,6 +38,7 @@ const TagsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 10px;
 `
 
 const singleProject = ({ children, title, tags }) => {
