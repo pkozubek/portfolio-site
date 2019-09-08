@@ -32,7 +32,7 @@ const Paragraph = styled.p`
 
 const projects = () => {
   return (
-    <Container>
+    <Container data-aos="fade-out">
       <StyledH1>
         Jeśli szukasz front-end developera to trafiłeś idealnie!
       </StyledH1>

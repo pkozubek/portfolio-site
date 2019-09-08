@@ -13,7 +13,7 @@ import Education from "../components/education/education"
 class IndexPage extends Component {
   componentDidMount() {
     AOS.init({
-      duration: 1000,
+      duration: 2000,
       once: true,
     })
   }
@@ -22,10 +22,7 @@ class IndexPage extends Component {
     return (
       <Layout>
         <SEO title="Paweł Kozubek portfolio" />
-        <div data-aos="fade-in">
-          <AboutMe />
-        </div>
-
+        <AboutMe />
         <Experience />
         <Education />
         <Project />

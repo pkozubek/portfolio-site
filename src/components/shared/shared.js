@@ -24,6 +24,10 @@ export const SingleExpEduContainer = styled.div`
   h3 {
     color: rgba(51, 153, 255, 0.5);
   }
+
+  label {
+    color: lightgray;
+  }
 `
 
 export const SubSingleExperience = styled.div`

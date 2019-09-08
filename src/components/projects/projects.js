@@ -65,33 +65,67 @@ const projects = () => {
 
   const projects = [
     {
-      tags: ["javascript", "react", "redux", "fetch"],
+      tags: ["javascript", "react", "redux", "axios", "ifnite-scroll"],
       title: "Beerguru",
+      links: {
+        code: "https://github.com/pkozubek/bear-guru",
+        demo: "https://pkozubek.github.io/bear-guru/",
+      },
       image: data.beerguru.childImageSharp.fluid,
     },
     {
       tags: ["javascript", "react", "redux"],
       title: "Meme-generator",
+      links: {
+        code: "https://github.com/pkozubek/react-js-meme-generator",
+        demo: "https://pkozubek.github.io/react-js-meme-generator/",
+      },
       image: data.memegenerator.childImageSharp.fluid,
     },
     {
-      tags: ["javascript", "react", "fetch", "infinite-scroll"],
+      tags: [
+        "javascript",
+        "react",
+        "redux",
+        "axios",
+        "material-ui",
+        "infinite-scroll",
+      ],
       title: "Infinite-Doge",
+      links: {
+        code: "https://github.com/pkozubek/infinite-doge",
+        demo: "https://pkozubek.github.io/infinite-doge/",
+      },
       image: data.doge.childImageSharp.fluid,
     },
     {
-      tags: ["javascript", "react", "fetch"],
+      tags: ["javascript", "react", "axios"],
       title: "Meal-suggestion",
+      links: {
+        code: "https://github.com/pkozubek/meal-suggestion",
+        demo: "https://pkozubek.github.io/meal-suggestion/",
+      },
       image: data.meal.childImageSharp.fluid,
     },
+
     {
-      tags: ["javascript", "fetch", "redux"],
+      tags: ["javascript", "axios", "redux"],
       title: "Burger app(course)",
+      links: {
+        code: "https://github.com/pkozubek/burgerapp",
+        demo: "https://pkozubek.github.io/burgerapp/",
+      },
       image: data.burgerapp.childImageSharp.fluid,
     },
+
     {
       tags: ["C#", "Unity"],
       title: "Racing Game",
+      links: {
+        code: "https://github.com/pkozubek/projekt_inzynierski",
+        demo:
+          "https://github.com/pkozubek/projekt_inzynierski/archive/master.zip",
+      },
       image: data.racing.childImageSharp.fluid,
     },
   ]
@@ -101,10 +135,10 @@ const projects = () => {
       <Title>Projekty</Title>
       <ProjectWrapper>
         {projects.map(singleProject => {
-          const { tags, title, image } = singleProject
+          const { tags, title, image, links } = singleProject
           return (
             <SingleProject key={title} tags={tags} title={title}>
-              <FormatedImage fluidImage={image} />
+              <FormatedImage links={links} fluidImage={image} />
             </SingleProject>
           )
         })}
