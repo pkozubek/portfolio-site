@@ -6,7 +6,7 @@ import { Container, Content } from "../shared/shared"
 
 const experience = () => {
   return (
-    <Container data-aos="fade-out">
+    <Container id="experience" data-aos="fade-out">
       <Title>Doświadczenie</Title>
       <Content>
         <SingleExperience

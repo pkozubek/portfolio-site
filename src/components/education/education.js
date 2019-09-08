@@ -9,7 +9,7 @@ import { SingleExpEduContainer, SubSingleExperience } from "../shared/shared"
 
 const education = () => {
   return (
-    <Container data-aos="fade-out">
+    <Container id="education" data-aos="fade-out">
       <Title>Wykształcenie</Title>
       <Content>
         <SingleExpEduContainer>

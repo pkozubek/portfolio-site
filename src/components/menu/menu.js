@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import { scrollToId } from "../shared/shared"
+
 const StyledList = styled.ul`
   list-style: none;
   padding: 0 0 25px 0;
@@ -32,16 +34,25 @@ const SingleMenu = styled.li`
     color: white;
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    display: block;
+    display: none;
+  }
 `
 
 const menu = () => {
   return (
     <StyledList>
-      <SingleMenu>O mnie</SingleMenu>
-      <SingleMenu>Doświadczenie</SingleMenu>
-      <SingleMenu>Wykształcenie</SingleMenu>
-      <SingleMenu>Projekty</SingleMenu>
-      <SingleMenu>Kontakt</SingleMenu>
+      <SingleMenu onClick={() => scrollToId("about_me")}>O mnie</SingleMenu>
+      <SingleMenu onClick={() => scrollToId("experience")}>
+        Doświadczenie
+      </SingleMenu>
+      <SingleMenu onClick={() => scrollToId("education")}>
+        Wykształcenie
+      </SingleMenu>
+      <SingleMenu onClick={() => scrollToId("projects")}>Projekty</SingleMenu>
+      <SingleMenu onClick={() => scrollToId("contact")}>Kontakt</SingleMenu>
     </StyledList>
   )
 }

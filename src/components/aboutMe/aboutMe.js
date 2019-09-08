@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import Skills from "./skills/skills"
-import { Container } from "../shared/shared"
+import { Container, scrollToId } from "../shared/shared"
 import Button from "../ui/button"
 
 const StyledH1 = styled.h1`
@@ -32,21 +32,20 @@ const Paragraph = styled.p`
 
 const projects = () => {
   return (
-    <Container data-aos="fade-out">
+    <Container id="about_me" data-aos="fade-out">
       <StyledH1>
         Jeśli szukasz front-end developera to trafiłeś idealnie!
       </StyledH1>
       <Paragraph>
         Jestem abitnym, stale podnaszącym swoje umiejętności programistą. Odkąd
-        pamiętam, zawsze interesowałem się informatyka i programowaniem , a
+        pamiętam, zawsze interesowałem się informatyką i programowaniem, a
         tworzenie przejrzystych i funkcjonalnych interfejsów, stało się moją
-        najwiekszą pasją. Chętnie nawiąze współpracę z osobami, które tak jak
-        ja, pragną się rozwijąć i nie lubią nudy. Jesteś zainteresowany/a
-        naiązaniem współpracy? Chcesz dowiedzieć się o mnie czegoś więcej?
+        największą pasją. Chętnie nawiążę współpracę z osobami, które tak jak ja
+        pragną się rozwijąć i nie lubią nudy. Jesteś zainteresowany/a
+        nawiązaniem współpracy? Chcesz dowiedzieć się o mnie czegoś więcej?
         Kliknij w kontakt, na pewno się odezwę!
-        <Button>Kontakt</Button>
+        <Button action={() => scrollToId("contact")}>Kontakt</Button>
       </Paragraph>
-
       <Skills />
     </Container>
   )

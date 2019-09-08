@@ -30,6 +30,10 @@ const PageWrapper = styled.main`
   margin-left: 25%;
   width: calc(70% - 25px);
   padding: 25px;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
 `
 
 const Layout = ({ children }) => {

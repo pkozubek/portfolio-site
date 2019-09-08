@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import SmoothScroll from "smooth-scroll"
 
 export const Container = styled.div`
   width: 90%;
@@ -14,6 +15,16 @@ export const Container = styled.div`
     color: rgba(51, 153, 255, 0.5);
   }
 `
+
+export const scrollToId = id => {
+  const element = document.getElementById(id)
+
+  element.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "nearest",
+  })
+}
 
 export const SingleExpEduContainer = styled.div`
   margin: 25px;

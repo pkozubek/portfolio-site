@@ -15,7 +15,7 @@ const ContactContainer = styled.div`
 `
 
 const FormContainer = styled.form`
-  width: 60%;
+  width: 100%;
 
   input {
     width: 60%;
@@ -23,6 +23,16 @@ const FormContainer = styled.form`
 
   textarea {
     width: 80%;
+  }
+
+  @media (max-width: 768px) {
+    input {
+      width: 80%;
+    }
+
+    textarea {
+      width: 90%;
+    }
   }
 `
 
@@ -59,7 +69,7 @@ const FormMessage = styled.div`
 
 const handleMessageSend = event => {
   event.preventDefault()
-  console.log("click")
+  window.open("mailto:test@example.com")
 }
 
 class Contact extends Component {
@@ -187,17 +197,18 @@ class Contact extends Component {
     })
 
     return (
-      <ContactContainer data-aos="fade-out">
+      <ContactContainer id="contact" data-aos="fade-out">
         <Title>Kontakt</Title>
         <FormMessage>
           Spodobały ci się moje projekty? Chciałbyś nawiązać współprace?
           Skontaktuj się ze mną!
         </FormMessage>
-        <FormContainer>
+        <FormContainer
+          method="post"
+          action="https://formspree.io/pkozubek92@gmail.com"
+        >
           {renderedForm}
-          <Button disabled={!isFormValid} action={handleMessageSend}>
-            Wyślij
-          </Button>
+          <Button disabled={!isFormValid}>Wyślij</Button>
         </FormContainer>
         <InfoContainer>
           <p>
@@ -207,7 +218,7 @@ class Contact extends Component {
             </a>
           </p>
           <p>
-            <FaPhoneSquare /> 600289359
+            <FaPhoneSquare /> 660946196
           </p>
           <p>
             <FaEnvelope /> pkozubek92@gmail.com

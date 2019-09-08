@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { withPrefix } from "gatsby"
 import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa"
 
 import MyImage from "./image"
@@ -84,9 +85,15 @@ const header = () => {
       <h1>Paweł Kozubek</h1>
       <h2>Frontend Developer</h2>
       <LinkWrapper>
-        <FaGithub />
-        <FaLinkedin />
-        <FaFileAlt />
+        <a href="https://github.com/pkozubek">
+          <FaGithub />
+        </a>
+        <a href="https://www.linkedin.com/in/pawel-kozubek92/">
+          <FaLinkedin />
+        </a>
+        <a href={withPrefix("/cv.pdf")} target="_blank">
+          <FaFileAlt />
+        </a>
       </LinkWrapper>
       <InfoWrapper>
         <p>

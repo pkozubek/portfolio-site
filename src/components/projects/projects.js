@@ -65,7 +65,7 @@ const projects = () => {
 
   const projects = [
     {
-      tags: ["javascript", "react", "redux", "axios", "ifnite-scroll"],
+      tags: ["javascript", "react", "redux", "axios"],
       title: "Beerguru",
       links: {
         code: "https://github.com/pkozubek/bear-guru",
@@ -83,14 +83,7 @@ const projects = () => {
       image: data.memegenerator.childImageSharp.fluid,
     },
     {
-      tags: [
-        "javascript",
-        "react",
-        "redux",
-        "axios",
-        "material-ui",
-        "infinite-scroll",
-      ],
+      tags: ["javascript", "react", "redux", "axios", "material-ui"],
       title: "Infinite-Doge",
       links: {
         code: "https://github.com/pkozubek/infinite-doge",
@@ -131,7 +124,7 @@ const projects = () => {
   ]
 
   return (
-    <Container data-aos="fade-out">
+    <Container id="projects" data-aos="fade-out">
       <Title>Projekty</Title>
       <ProjectWrapper>
         {projects.map(singleProject => {
