@@ -25,9 +25,28 @@ const H2Styled = styled.h2`
     width: 150px;
     height: 3px;
     position: relative;
-    top: 50%;
+    top: calc(50% - 3px);
     left: 100%;
     background: gray;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.4em;
+    width: auto;
+    height: auto;
+    display: inline-block;
+
+    :before {
+      width: 60px;
+      height: 3px;
+      left: -80px;
+    }
+
+    :after {
+      width: 60px;
+      height: 3px;
+      left: calc(100% + 20px);
+    }
   }
 `
 

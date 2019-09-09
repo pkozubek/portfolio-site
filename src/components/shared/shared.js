@@ -14,6 +14,16 @@ export const Container = styled.div`
     margin-right: 25px;
     color: rgba(51, 153, 255, 0.5);
   }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: 25px 5% 25px 5%;
+  }
+
+  @media (max-width: 550px) {
+    width: 100%;
+    margin: 25px 0 25px 0;
+  }
 `
 
 export const scrollToId = id => {
@@ -39,6 +49,23 @@ export const SingleExpEduContainer = styled.div`
   label {
     color: lightgray;
   }
+
+  @media (max-width: 768px) {
+    margin: 15px;
+    width: calc(100% - 30px);
+
+    h2 {
+      font-size: 1.2em;
+    }
+
+    h3 {
+      font-size: 1.1em;
+    }
+
+    p {
+      font-size: 0.9em;
+    }
+  }
 `
 
 export const SubSingleExperience = styled.div`
@@ -55,6 +82,14 @@ export const SubSingleExperience = styled.div`
 
   p {
     color: lightgray;
+  }
+
+  @media (max-width: 768px) {
+    width: calc(90% - 120px);
+
+    h3 {
+      font-size: 1.1em;
+    }
   }
 `
 

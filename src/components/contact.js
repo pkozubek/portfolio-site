@@ -26,12 +26,16 @@ const FormContainer = styled.form`
   }
 
   @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
     input {
-      width: 80%;
+      width: 95%;
     }
 
     textarea {
-      width: 90%;
+      width: 100%;
     }
   }
 `
@@ -57,6 +61,14 @@ const InfoContainer = styled.div`
     height: 30px;
     margin-right: 10px;
     line-height: 1.3;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    margin-top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: none;
+    width: auto;
   }
 `
 

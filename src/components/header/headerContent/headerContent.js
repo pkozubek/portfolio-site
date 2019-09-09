@@ -30,35 +30,22 @@ const HeaderContainer = styled.div`
   @media (max-width: 768px) {
     height: calc(100vh - 25px);
     padding-top: 25px;
-  }
-`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: -55px 0 0 0;
 
-const InfoWrapper = styled.div`
-  color: white;
-  width: 70%;
-  margin: 15%;
-  display: none;
-
-  p {
-    text-align: center;
-  }
-  label {
-    color: rgb(51, 153, 255);
-  }
-
-  a {
-    text-decoration: underline;
-  }
-
-  a:hover {
-    color: rgb(51, 153, 255);
-  }
-
-  @media (max-width: 768px) {
-    display: block;
-
-    p {
-      margin: 0;
+    h1 {
+      margin-block-end: 0.1em;
+      width: 100%;
+      font-size: 1.4em;
+    }
+    h2 {
+      margin-block-end: 0.1em;
+      font-size: 1.2em;
+      width: 100%;
     }
   }
 `
@@ -75,6 +62,16 @@ const LinkWrapper = styled.div`
   svg:hover {
     color: white;
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    svg {
+      width: 25px;
+      height: 25px;
+      margin: 10px;
+    }
   }
 `
 
@@ -95,14 +92,6 @@ const header = () => {
           <FaFileAlt />
         </a>
       </LinkWrapper>
-      <InfoWrapper>
-        <p>
-          Jeśli szukasz ambitnego <label>frontend</label> developera to bardzo
-          dobrze trafiłeś! Obecnie rozglądam się za pracą . Jeśli szukasz
-          pasjonata <label>React</label> zajrzyj do działu{" "}
-          <a href="#">Kontakt</a>, na pewno się odezwę!
-        </p>
-      </InfoWrapper>
       <Menu />
     </HeaderContainer>
   )

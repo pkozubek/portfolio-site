@@ -17,6 +17,17 @@ const SingleProjectWrapper = styled.div`
     color: gray;
     text-align: center;
   }
+
+  @media (max-width: 1280px) {
+    width: 40%;
+  }
+
+  @media (max-width: 768px) {
+    width: 70%;
+    h3 {
+      font-size: 1.3em !important;
+    }
+  }
 `
 
 const ProjectContent = styled.div`

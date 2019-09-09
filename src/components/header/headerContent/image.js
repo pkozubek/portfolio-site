@@ -13,6 +13,11 @@ const StyledImg = styled(Img)`
   img {
     object-fit: fill !important;
   }
+
+  @media (max-width: 768px) {
+    width: 140px;
+    height: 140px;
+  }
 `
 
 const Wrapper = styled.figure`

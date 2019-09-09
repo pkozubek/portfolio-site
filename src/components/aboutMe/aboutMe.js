@@ -10,6 +10,14 @@ const StyledH1 = styled.h1`
   font-size: 2em;
   margin: 0 auto;
   margin-top: 25px;
+
+  @media (max-width: 768px) {
+    font-size: 1.4em;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 1.3em;
+  }
 `
 
 const Paragraph = styled.p`
@@ -27,6 +35,18 @@ const Paragraph = styled.p`
   button {
     margin-top: 20px !important;
     display: block;
+  }
+
+  @media (max-width: 1024px) {
+    button {
+      margin: 0 auto !important;
+      margin-top: 20px !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.2em;
+    line-height: 1.3;
   }
 `
 

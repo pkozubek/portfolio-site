@@ -17,6 +17,11 @@ const StyledH2 = styled.h2`
   display: inline;
   margin: 0 auto;
   padding-bottom: 5px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 1.2em;
+  }
 `
 
 const skills = () => {
