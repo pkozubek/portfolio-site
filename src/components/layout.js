@@ -6,6 +6,7 @@ import { IoMdMenu, IoIosCloseCircleOutline } from "react-icons/io"
 import Header from "./header/header"
 import SiteMetada from "../siteMetadata/siteMetadata"
 import MobileMenu from "../components/menu/mobileMenu"
+import { scrollToId } from "./shared/shared"
 
 const LayoutWrapper = styled.div`
   display: flex;
@@ -51,7 +52,7 @@ const MobileMenuIcon = styled.div`
   svg {
     width: 50px;
     height: 50px;
-    transition: 2s;
+    transition: 0.3s;
   }
 
   @media (max-width: 768px) {
@@ -69,8 +70,12 @@ class Layout extends Component {
     window.onscroll = () => {
       let color = "white"
 
-      if (document.documentElement.scrollTop > window.innerHeight)
+      if (
+        document.documentElement.scrollTop > window.innerHeight &&
+        !this.state.menuActivated
+      ) {
         color = "gray"
+      }
 
       this.setState({ color: color })
     }
@@ -78,7 +83,13 @@ class Layout extends Component {
 
   iconClick = () => {
     const { menuActivated } = this.state
-    this.setState({ menuActivated: !menuActivated })
+    const newColor = menuActivated ? "gray" : "white"
+    this.setState({ menuActivated: !menuActivated, color: newColor })
+  }
+
+  mobileMenuController = menuName => {
+    scrollToId(menuName)
+    this.iconClick()
   }
 
   render() {
@@ -89,10 +100,19 @@ class Layout extends Component {
 
     return (
       <LayoutWrapper>
-        <MobileMenuIcon onClick={this.iconClick} color={color}>
+        <MobileMenuIcon
+          onClick={this.iconClick}
+          menuVisible={this.menuActivated}
+          color={color}
+        >
           {icon}
         </MobileMenuIcon>
-        {/*<MobileMenu />*/}
+        {
+          <MobileMenu
+            menuClick={this.mobileMenuController}
+            visible={menuActivated}
+          />
+        }
         <SiteMetada />
         <Reset />
         <Header />

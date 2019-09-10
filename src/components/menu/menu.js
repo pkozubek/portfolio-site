@@ -9,6 +9,12 @@ const StyledList = styled.ul`
   margin: 0 auto;
   margin-top: 50px;
   text-align: center;
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    display: block;
+    display: none;
+  }
 `
 
 const SingleMenu = styled.li`
@@ -33,11 +39,6 @@ const SingleMenu = styled.li`
     transition: 1s;
     color: white;
     cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
-    display: block;
-    display: none;
   }
 `
 
