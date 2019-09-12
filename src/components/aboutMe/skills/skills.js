@@ -27,7 +27,7 @@ const StyledH2 = styled.h2`
 const skills = () => {
   return (
     <>
-      <StyledH2>Technologie z którymi mam doświadczenie:</StyledH2>
+      <StyledH2>Technologie w których mam doświadczenie:</StyledH2>
       <SkillsContainer>
         <SingleSkill
           haveBorder={true}

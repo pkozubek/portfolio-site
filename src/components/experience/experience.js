@@ -24,7 +24,7 @@ const experience = () => {
           companyName="Uti.pl"
           startDate={[2015, 8, 1]}
           endDate={[2015, 10, 30]}
-          description="Przenoszenie stron pomędzy hostingami , proste poprawki wizualne, kontakt z klientem"
+          description="Przenoszenie stron pomędzy hostingami, proste poprawki wizualne, kontakt z klientem"
           datesText="08.2015 - 11.2015"
           titles={[{ title: "Pracownik Działu IT" }]}
         />

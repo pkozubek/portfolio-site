@@ -42,7 +42,7 @@ const singleExperience = ({
     titles.length === 1 ? (
       <h3>{titles[0].title}</h3>
     ) : (
-      <h3>{titles[0].title + " , " + titles[1].title}</h3>
+      <h3>{titles[0].title + ", " + titles[1].title}</h3>
     )
 
   const multipleTitles =
