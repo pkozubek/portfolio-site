@@ -42,7 +42,7 @@ const PageWrapper = styled.main`
 
 const MobileMenuIcon = styled.div`
   display: none;
-  position: sticky;
+  position: fixed;
   left: calc(95% - 50px);
   top: 15px;
   z-index: 5;

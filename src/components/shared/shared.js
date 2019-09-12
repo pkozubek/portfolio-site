@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import SmoothScroll from "smooth-scroll"
 
 export const Container = styled.div`
   width: 90%;
@@ -77,7 +76,7 @@ export const SubSingleExperience = styled.div`
 
   h3 {
     color: ${props =>
-      props.destination == "experience" ? "rgba(51,153,255,0.5)" : "gray"};
+      props.destination === "experience" ? "rgba(51,153,255,0.5)" : "gray"};
   }
 
   p {

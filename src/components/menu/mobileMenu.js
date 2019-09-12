@@ -2,17 +2,19 @@ import React from "react"
 import styled from "styled-components"
 
 const MenuContainer = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: ${props => (props.visible === true ? "100vh" : "0")};
   background: black;
   position: fixed;
   z-index: 4;
-  display: ${props => (props.visible === true ? "flex" : "none")};
+  visibility: ${props => (props.visible === true ? "visible" : "hidden")};
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transition: 1s;
+  opacity: ${props => (props.visible === true ? "1" : "0")};
+  transition: all 0.2s linear;
 
   @media (min-width: 769px) {
     display: none;

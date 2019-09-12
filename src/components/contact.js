@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-
 import { FaLinkedin, FaPhoneSquare, FaEnvelope } from "react-icons/fa"
 
 import Button from "../components/ui/button"
@@ -78,11 +77,6 @@ const FormMessage = styled.div`
   margin: 25px 0;
   text-align: center;
 `
-
-const handleMessageSend = event => {
-  event.preventDefault()
-  window.open("mailto:test@example.com")
-}
 
 class Contact extends Component {
   state = {

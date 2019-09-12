@@ -1,9 +1,9 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "strona portfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Pawel Kozubek <pkozubek92@gmail.com>",
   "dependencies": {
     "aos": "^2.3.4",
     "babel-plugin-styled-components": "^1.10.6",
@@ -17,6 +17,7 @@
     "gatsby-plugin-styled-components": "^3.1.3",
     "gatsby-source-filesystem": "^2.1.11",
     "gatsby-transformer-sharp": "^2.2.7",
+    "global": "^4.4.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -34,6 +35,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",

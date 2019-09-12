@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 
 import { FaRegCircle } from "react-icons/fa"
 import { SubSingleExperience } from "./shared"

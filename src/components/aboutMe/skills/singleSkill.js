@@ -75,6 +75,9 @@ const singleSkill = ({ title, haveBorder, skills }) => {
     case "Ucze się":
       icon = <IoIosBulb />
       break
+    default:
+      icon = <FaChrome />
+      break
   }
 
   return (

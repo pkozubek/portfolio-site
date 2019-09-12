@@ -28,14 +28,19 @@ const HeaderContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    height: calc(100vh - 25px);
-    padding-top: 25px;
+    height: -moz-available;
+    height: -webkit-fill-available;
+    height: fill-available;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin: -55px 0 0 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     h1 {
       margin-block-end: 0.1em;
@@ -88,7 +93,11 @@ const header = () => {
         <a href="https://www.linkedin.com/in/pawel-kozubek92/">
           <FaLinkedin />
         </a>
-        <a href={withPrefix("/cv.pdf")} target="_blank">
+        <a
+          href={withPrefix("/cv.pdf")}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaFileAlt />
         </a>
       </LinkWrapper>

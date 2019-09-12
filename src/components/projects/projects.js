@@ -5,7 +5,6 @@ import styled from "styled-components"
 import SingleProject from "./singleProject/singleProject"
 import FormatedImage from "./formatedImg"
 import Title from "../ui/title"
-import singleProject from "./singleProject/singleProject"
 import { Container } from "../shared/shared"
 
 const ProjectWrapper = styled.div`
