@@ -14,7 +14,7 @@ const ContactContainer = styled.div`
 `
 
 const FormContainer = styled.form`
-  width: 100%;
+  width: 60%;
 
   input {
     width: 60%;
@@ -25,6 +25,7 @@ const FormContainer = styled.form`
   }
 
   @media (max-width: 768px) {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

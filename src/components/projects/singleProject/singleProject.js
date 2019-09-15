@@ -14,7 +14,7 @@ const SingleProjectWrapper = styled.div`
   }
 
   h3 {
-    color: gray;
+    color: rgb(39, 40, 46);
     text-align: center;
   }
 
@@ -47,6 +47,7 @@ const StyledLabel = styled.label`
 const TagsWrapper = styled.div`
   width: 100%;
   display: flex;
+  color: gray;
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 10px;

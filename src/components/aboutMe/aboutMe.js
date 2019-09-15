@@ -57,9 +57,9 @@ const projects = () => {
         Jeśli szukasz front-end developera to trafiłeś idealnie!
       </StyledH1>
       <Paragraph>
-        Jestem abitnym, stale podnaszącym swoje umiejętności programistą. Odkąd
+        Jestem ambitnym, stale podnoszącym swoje umiejętności programistą. Odkąd
         pamiętam, zawsze interesowałem się informatyką i programowaniem, a
-        tworzenie przejrzystych i funkcjonalnych interfejsów, stało się moją
+        tworzenie przejrzystych i funkcjonalnych interfejsów stało się moją
         największą pasją. Chętnie nawiążę współpracę z osobami, które tak jak ja
         pragną się rozwijąć i nie lubią nudy. Jesteś zainteresowany/a
         nawiązaniem współpracy? Chcesz dowiedzieć się o mnie czegoś więcej?

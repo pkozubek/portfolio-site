@@ -5,7 +5,7 @@ const H2Styled = styled.h2`
   font-size: 2em;
   width: 250px;
   margin: 25px auto;
-  color: gray;
+  color: rgb(39, 40, 46);
   text-align: center;
 
   &:after {

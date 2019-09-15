@@ -20,7 +20,7 @@ const Reset = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    color: gray;
+    color: rgb(39, 40, 46);
     font-family: 'Varela Round', sans-serif;
 }
 `
