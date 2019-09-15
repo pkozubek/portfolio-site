@@ -14,6 +14,7 @@ const education = () => {
         <SingleExpEduContainer>
           <h2>Politechnika Świętokrzyska w Kielcach</h2>
           <h3>Informatyka</h3>
+          <label>2012-2017</label>
         </SingleExpEduContainer>
         <FaRegCircle />
         <SubSingleExperience destination="education">

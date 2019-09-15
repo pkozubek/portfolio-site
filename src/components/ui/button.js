@@ -9,7 +9,7 @@ const StyledButton = styled.button`
   border-radius: 8px;
   box-shadow: none;
   border: 2px solid lightgray;
-  color: black;
+  color: gray;
   background: white;
   font-size: 0.8em;
   transition: 0.4s;
