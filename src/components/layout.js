@@ -20,7 +20,7 @@ const Reset = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    color: rgb(39, 40, 46);
+    color: rgba(0, 0, 0,.7);
     font-family: 'Varela Round', sans-serif;
 }
 `
@@ -74,7 +74,7 @@ class Layout extends Component {
         document.documentElement.scrollTop > window.innerHeight &&
         !this.state.menuActivated
       ) {
-        color = "gray"
+        color = "rgba(0, 0, 0, 0.9);"
       }
 
       this.setState({ color: color })

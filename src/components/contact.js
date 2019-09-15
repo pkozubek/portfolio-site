@@ -52,7 +52,7 @@ const InfoContainer = styled.div`
   }
 
   a {
-    color: rgb(39, 40, 46);
+    color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
   }
 

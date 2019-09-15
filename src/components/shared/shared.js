@@ -76,7 +76,9 @@ export const SubSingleExperience = styled.div`
 
   h3 {
     color: ${props =>
-      props.destination === "experience" ? "rgba(51,153,255,0.5)" : "gray"};
+      props.destination === "experience"
+        ? "rgba(51,153,255,0.5)"
+        : "rgba(0,0,0,.8)"};
   }
 
   p {
