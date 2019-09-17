@@ -5,11 +5,15 @@ import SingleSkill from "./singleSkill"
 
 const SkillsContainer = styled.div`
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-  margin-top: 15px;
+  margin: 15px auto;
   border-radius: 25px;
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 1640px) {
+    width: 100%;
+  }
 `
 
 const StyledH2 = styled.h2`

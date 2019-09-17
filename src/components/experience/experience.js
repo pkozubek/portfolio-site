@@ -14,7 +14,7 @@ const experience = () => {
           startDate={[2018, 1, 1]}
           endDate={null}
           datesText="02.2018 - obecnie"
-          description="Praca Zarówno z Frontem i Back-endem (jQuery + PHP + SQL), tworzenie systemów wspomagających zamówienia, zapytań czy procedur SQL a także responsywnych interfejsów dostosowanych pod urządzenia mobilne(RWD). Poprawki w systemach raportowych, kontakt z biznesem w celu ustalenia specyfiki rozwiązania"
+          description="Praca zarówno z Frontem i Back-endem (jQuery + PHP + SQL), tworzenie systemów wspomagających zamówienia, zapytań czy procedur SQL a także responsywnych interfejsów dostosowanych pod urządzenia mobilne(RWD). Poprawki w systemach raportowych, kontakt z biznesem w celu ustalenia specyfiki rozwiązania"
           titles={[
             { title: "Senior Developer Analyst", date: "04.2019 - obecnie" },
             { title: "Developer", date: "02.2018 - 04.2019" },
