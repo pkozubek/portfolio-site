@@ -7,9 +7,14 @@ import Button from "../ui/button"
 
 const StyledH1 = styled.h1`
   text-align: center !important;
+  width: 90%;
   font-size: 2em;
   margin: 0 auto;
   margin-top: 25px;
+
+  @media (max-width: 1640px) {
+    font-size: 1.8em;
+  }
 
   @media (max-width: 768px) {
     font-size: 1.4em;
@@ -23,10 +28,12 @@ const StyledH1 = styled.h1`
 const Paragraph = styled.p`
   text-align: justify;
   margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-size: 1.3em;
-  line-height: 1.4;
+  margin-top: 25px;
+  margin-bottom: 75px;
+  font-size: 1.1em;
+  line-height: 1.5;
+  font-family: "Roboto Slab", serif;
+  width: 80%;
 
   label {
     color: rgba(51, 153, 255, 0.5) !important;
@@ -37,6 +44,10 @@ const Paragraph = styled.p`
     display: block;
   }
 
+  @media (max-width: 1640px) {
+    width: 90%;
+  }
+
   @media (max-width: 1024px) {
     button {
       margin: 0 auto !important;
@@ -45,7 +56,7 @@ const Paragraph = styled.p`
   }
 
   @media (max-width: 768px) {
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.3;
   }
 `
@@ -64,7 +75,9 @@ const projects = () => {
         pragną się rozwijąć i nie lubią nudy. Jesteś zainteresowany/a
         nawiązaniem współpracy? Chcesz dowiedzieć się o mnie czegoś więcej?
         Kliknij w kontakt, na pewno się odezwę!
-        <Button action={() => scrollToId("contact")}>Kontakt</Button>
+        <Button centered={true} action={() => scrollToId("contact")}>
+          Kontakt
+        </Button>
       </Paragraph>
       <Skills />
     </Container>

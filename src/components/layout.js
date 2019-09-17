@@ -22,7 +22,12 @@ const Reset = createGlobalStyle`
     margin: 0;
     color: rgba(0, 0, 0,.7);
     font-family: 'Varela Round', sans-serif;
-}
+  }
+  
+  h1{
+    padding: 0;
+    margin-bottom: 0px;
+  }
 `
 
 const PageWrapper = styled.main`

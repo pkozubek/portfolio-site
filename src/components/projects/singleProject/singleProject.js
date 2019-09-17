@@ -14,7 +14,7 @@ const SingleProjectWrapper = styled.div`
   }
 
   h3 {
-    color: rgb(39, 40, 46);
+    color: rgba(0, 0, 0, 0.7);
     text-align: center;
   }
 
@@ -42,6 +42,7 @@ const StyledLabel = styled.label`
   border-radius: 8px;
   margin: 5px;
   padding: 5px;
+  color: rgba(0, 0, 0, 0.6);
 `
 
 const TagsWrapper = styled.div`

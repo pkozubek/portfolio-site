@@ -13,7 +13,7 @@ const H2Styled = styled.h2`
     display: block;
     width: 150px;
     height: 3px;
-    background: gray;
+    background: rgba(51, 153, 255, 0.5);
     position: relative;
     top: -50%;
     left: -150px;
@@ -27,7 +27,7 @@ const H2Styled = styled.h2`
     position: relative;
     top: calc(50% - 3px);
     left: 100%;
-    background: gray;
+    background: rgba(51, 153, 255, 0.5);
   }
 
   @media (max-width: 768px) {

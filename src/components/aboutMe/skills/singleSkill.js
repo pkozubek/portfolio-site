@@ -17,13 +17,15 @@ const Container = styled.div`
 
   ul {
     list-style-type: none;
-    padding: 10px 0 10px 0;
+    padding: 5px 0 5px 0;
+    font-family: "Roboto Slab", serif;
   }
 
   li {
     display: block;
     text-align: center;
     padding-bottom: 10px;
+    font-size: 0.9em;
   }
 
   @media (max-width: 768px) {

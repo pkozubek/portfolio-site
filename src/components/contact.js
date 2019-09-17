@@ -61,6 +61,7 @@ const InfoContainer = styled.div`
     height: 30px;
     margin-right: 10px;
     line-height: 1.3;
+    color: rgba(51, 153, 255, 0.5);
   }
 
   @media (max-width: 768px) {
@@ -215,7 +216,9 @@ class Contact extends Component {
           action="https://formspree.io/pkozubek92@gmail.com"
         >
           {renderedForm}
-          <Button disabled={!isFormValid}>Wyślij</Button>
+          <Button centered={false} disabled={!isFormValid}>
+            Wyślij
+          </Button>
         </FormContainer>
         <InfoContainer>
           <p>

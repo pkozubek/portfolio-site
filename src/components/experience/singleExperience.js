@@ -5,8 +5,9 @@ import { SingleExpEduContainer } from "../shared/shared"
 import SubExp from "../shared/subExp"
 
 const JobDescription = styled.p`
-  width: 90%;
-  color: rgba(51, 153, 255, 0.45);
+  width: 80%;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Roboto Slab", serif;
 `
 
 const singleExperience = ({

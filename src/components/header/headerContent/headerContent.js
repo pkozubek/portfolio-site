@@ -62,11 +62,13 @@ const LinkWrapper = styled.div`
     width: 20px;
     height: 20px;
     color: rgba(255, 255, 255, 0.6);
+    transition: all 0.4s;
   }
 
   svg:hover {
     color: white;
     cursor: pointer;
+    transition: all 0.4s;
   }
 
   @media (max-width: 768px) {
