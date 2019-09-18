@@ -8,9 +8,13 @@ import Title from "../components/ui/title"
 
 const ContactContainer = styled.div`
   width: 90%;
-  margin: 5%;
+  margin: 15px 5% 5% 5%;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    margin: 5%;
+  }
 `
 
 const FormContainer = styled.form`

@@ -7,7 +7,7 @@ const StyledList = styled.ul`
   list-style: none;
   padding: 0 0 25px 0;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 20%;
   text-align: center;
   z-index: 10;
 
@@ -20,6 +20,7 @@ const StyledList = styled.ul`
 const SingleMenu = styled.li`
   color: rgba(255, 255, 255, 0.5);
   padding-bottom: 15px;
+  font-size: 1.1em;
   transition: 1s;
 
   :hover::before {
@@ -39,6 +40,10 @@ const SingleMenu = styled.li`
     transition: 1s;
     color: white;
     cursor: pointer;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 0.9em;
   }
 `
 

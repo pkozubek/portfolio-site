@@ -19,12 +19,23 @@ const HeaderContainer = styled.div`
   }
 
   h1 {
-    font-size: 1.3em;
+    font-size: 1.4em;
+    font-weight: normal;
   }
 
   h2 {
     font-size: 0.9em;
     color: rgba(255, 255, 255, 0.5);
+  }
+
+  @media (max-width: 1280px) {
+    h1 {
+      font-size: 1.3em;
+    }
+
+    h2 {
+      font-size: 0.8em;
+    }
   }
 
   @media (max-width: 768px) {
@@ -59,8 +70,8 @@ const LinkWrapper = styled.div`
   text-align: center;
   svg {
     margin: 5px;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     color: rgba(255, 255, 255, 0.6);
     transition: all 0.4s;
   }

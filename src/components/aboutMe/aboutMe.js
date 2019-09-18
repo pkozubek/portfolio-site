@@ -17,6 +17,7 @@ const StyledH1 = styled.h1`
   }
 
   @media (max-width: 768px) {
+    margin-top: 10px;
     font-size: 1.4em;
   }
 
