@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
@@ -6,6 +6,8 @@ import SingleProject from "./singleProject/singleProject"
 import FormatedImage from "./formatedImg"
 import Title from "../ui/title"
 import { Container } from "../shared/shared"
+import Button from "../ui/button"
+import AdditionalProject from "./singleProject/additionalProject"
 
 const ProjectWrapper = styled.div`
   width: 100%;
@@ -31,7 +33,7 @@ const projects = () => {
           }
         }
       }
-      meal: file(relativePath: { eq: "meal.png" }) {
+      movie: file(relativePath: { eq: "movie.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -91,13 +93,13 @@ const projects = () => {
       image: data.doge.childImageSharp.fluid,
     },
     {
-      tags: ["javascript", "react", "axios"],
-      title: "Meal-suggestion",
+      tags: ["NodeJs", "react", "axios", "axios", "scss"],
+      title: "Movie-App",
       links: {
-        code: "https://github.com/pkozubek/meal-suggestion",
-        demo: "https://pkozubek.github.io/meal-suggestion/",
+        code: "https://github.com/pkozubek/movie-app",
+        demo: "https://pkozubek.github.io/movie-app/",
       },
-      image: data.meal.childImageSharp.fluid,
+      image: data.movie.childImageSharp.fluid,
     },
 
     {
@@ -122,6 +124,56 @@ const projects = () => {
     },
   ]
 
+  const [isAdditionalProjectVisible, checkVisiblity] = useState(false)
+
+  const additionalProjectsArray = [
+    {
+      name: "Star Wars Wiki",
+      repo: "https://github.com/pkozubek/star-wars-characters",
+      demo: "https://pkozubek.github.io/star-wars-characters/",
+      tags: ["Javascript", "React", "Redux", "Axios"],
+    },
+    {
+      name: "Meal-suggestion",
+      repo: "https://github.com/pkozubek/meal-suggestion",
+      demo: "https://pkozubek.github.io/meal-suggestion/",
+      tags: ["javascript", "react", "axios"],
+    },
+    {
+      name: "Airhockey",
+      repo: "https://github.com/pkozubek/airhockey",
+      demo: "https://pkozubek.github.io/airhockey/",
+      tags: ["javascript"],
+    },
+    {
+      name: "MusicPlayer",
+      repo: "https://github.com/pkozubek/vanilla-js-player",
+      demo: "https://pkozubek.github.io/vanilla-js-player/",
+      tags: ["javascript"],
+    },
+  ]
+
+  const renderAdditionalProjects = additionalProjectsArray.map(
+    ({ name, repo, demo, tags }) => {
+      console.log(tags)
+      return (
+        <AdditionalProject
+          key={name}
+          name={name}
+          repo={repo}
+          demo={demo}
+          tags={tags}
+        />
+      )
+    }
+  )
+
+  const additionalProjectsRendered = isAdditionalProjectVisible ? (
+    renderAdditionalProjects
+  ) : (
+    <Button action={() => checkVisiblity(true)}>Zobacz więcej</Button>
+  )
+
   return (
     <Container id="projects" data-aos="fade-out">
       <Title>Projekty</Title>
@@ -134,6 +186,7 @@ const projects = () => {
             </SingleProject>
           )
         })}
+        {additionalProjectsRendered}
       </ProjectWrapper>
     </Container>
   )

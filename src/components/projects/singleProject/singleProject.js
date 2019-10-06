@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import { StyledLabel } from "./shared"
+
 const SingleProjectWrapper = styled.div`
   width: 25%;
   margin: 25px;
@@ -37,14 +39,6 @@ const StyledImage = styled.div`
   width: 100%;
   border: 1px solid lightgray;
 `
-const StyledLabel = styled.label`
-  border: 1px solid rgba(51, 153, 255, 0.5);
-  border-radius: 8px;
-  margin: 5px;
-  padding: 5px;
-  color: rgba(0, 0, 0, 0.6);
-`
-
 const TagsWrapper = styled.div`
   width: 100%;
   display: flex;
