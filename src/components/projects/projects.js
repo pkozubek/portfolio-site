@@ -155,7 +155,6 @@ const projects = () => {
 
   const renderAdditionalProjects = additionalProjectsArray.map(
     ({ name, repo, demo, tags }) => {
-      console.log(tags)
       return (
         <AdditionalProject
           key={name}

@@ -29,7 +29,9 @@ const Container = styled.div`
 
 const TagsContainer = styled.div`
   width: 100%;
-  height: 40px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
 `
 
 const additionalProject = ({ name, repo, demo, tags }) => {
@@ -44,8 +46,10 @@ const additionalProject = ({ name, repo, demo, tags }) => {
           <FaDesktop />
         </a>
         <TagsContainer>
-          {tags.map(singleTag => {
-            return <StyledLabel key={singleTag}>{singleTag}</StyledLabel>
+          {tags.map((singleTag, index) => {
+            return (
+              <StyledLabel key={singleTag + index}>{singleTag}</StyledLabel>
+            )
           })}
         </TagsContainer>
       </Container>

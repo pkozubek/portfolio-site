@@ -55,8 +55,10 @@ const singleProject = ({ children, title, tags }) => {
       <ProjectContent>
         <h3>{title}</h3>
         <TagsWrapper>
-          {tags.map(singleTag => {
-            return <StyledLabel key={singleTag}>{singleTag}</StyledLabel>
+          {tags.map((singleTag, index) => {
+            return (
+              <StyledLabel key={singleTag + index}>{singleTag}</StyledLabel>
+            )
           })}
         </TagsWrapper>
       </ProjectContent>
